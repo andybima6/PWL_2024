@@ -32,3 +32,10 @@ Route::get('/', function () {
 Route::get('/about', function () {
     return '2241720006';
 });
+
+
+Route::get('/user/{name}', function ($name) {
+    return 'Nama saya ' . $name;
+});
+
+
