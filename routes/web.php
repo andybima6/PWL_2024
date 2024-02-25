@@ -111,13 +111,19 @@ use App\Http\Controllers\WelcomeController;
 // Route::get('/articles/{id}', [PageController::class, 'articles']);
 
 
-Route::get('/home', [HomeController::class, 'home']);
-Route::get('/about', [AboutController::class, 'about']);
-Route::get('/articles/{id}', [ArticleController::class, 'article']);
-Route::resource('photos', PhotoController::class);
-Route::resource('photos', PhotoController::class)->only([
-    'index', 'show'
-]);
-Route::resource('photos', PhotoController::class)->except([
-    'create', 'store', 'update', 'destroy'
-]);
+// Route::get('/home', [HomeController::class, 'home']);
+// Route::get('/about', [AboutController::class, 'about']);
+// Route::get('/articles/{id}', [ArticleController::class, 'article']);
+// Route::resource('photos', PhotoController::class);
+// Route::resource('photos', PhotoController::class)->only([
+//     'index', 'show'
+// ]);
+// Route::resource('photos', PhotoController::class)->except([
+//     'create', 'store', 'update', 'destroy'
+// ]);
+
+// Route::get('/greeting', function () {
+//     return view('hello', ['name' => 'Andy']);
+// });
+
+Route::get('/greeting',[WelcomeController::class,'greeting']);
